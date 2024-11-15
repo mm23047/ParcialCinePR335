@@ -4,15 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f03face-79f3-4972-a145-08acfd64f88c" name="Changes" comment="" />
+ main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mm23047&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/mm23047/ParcialCinePR335.git&quot;,
+    &quot;accountId&quot;: &quot;a7d319e3-30e5-40b3-ac77-79601e854772&quot;
+  }
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -31,6 +48,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Maven.cine [package].executor&quot;: &quot;Run&quot;,
@@ -44,12 +62,15 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+ main
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\MINED\IdeaProjects\ParcialCinePR335\src\main" />
+      <recent name="C:\Users\MINED\IdeaProjects\ParcialCinePR335\src\main\resources" />
+      <recent name="C:\Users\MINED\IdeaProjects\ParcialCinePR335\src\main\webapp\WEB-INF" />
       <recent name="C:\Users\MINED\IdeaProjects\ParcialCinePR335\src\main\java\sv\edu\ues\occ\ingenieria\prn335_2024\cine" />
+      <recent name="C:\Users\MINED\IdeaProjects\ParcialCinePR335\src\main" />
     </key>
   </component>
   <component name="RunManager">
@@ -83,14 +104,52 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1731689636025</updated>
-      <workItem from="1731689637566" duration="1319000" />
+      <workItem from="1731689637566" duration="10108000" />
+      <workItem from="1731701422778" duration="7193000" />
     </task>
+    <task id="LOCAL-00001" summary="-Mapeo de entidades&#10;-Beans&#10;-Carpeta liberty&#10;-Actualizar pom.xml">
+      <option name="closed" value="true" />
+      <created>1731693298747</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731693298749</updated>
+    </task>
+    <task id="LOCAL-00002" summary="-Mapeo de entidades&#10;-Beans&#10;-Carpeta liberty&#10;-Actualizar pom.xml">
+      <option name="closed" value="true" />
+      <created>1731708782760</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731708782760</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="Base-del-proyecto" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="main" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -101,7 +160,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="Base-del-proyecto" />
                       </list>
                     </value>
                   </entry>
@@ -112,5 +171,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="-Mapeo de entidades&#10;-Beans&#10;-Carpeta liberty&#10;-Actualizar pom.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Mapeo de entidades&#10;-Beans&#10;-Carpeta liberty&#10;-Actualizar pom.xml" />
   </component>
 </project>
