@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<f:composition xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:h="jakarta.faces.html"
+               xmlns:p="http://primefaces.org/ui"
+               xmlns:f="jakarta.faces.facelets"
+               xmlns:cc="jakarta.faces.composite/crud"
+               template="WEB-INF/templates/principal.xhtml">
+
+    <f:define name="titulo">
+        #{frmTipoReservaf.tituloDePagina}
+    </f:define>
+
+    <f:define name="cuerpo">
+        <h:form id="frmTable">
+            <p:dataTable
+                    value="#{frmTipoReservaf.modelo}"
+                    var="r"
+                    rows="10"
+                    lazy="true"
+                    selectionMode="single"
+                    selection="#{frmTipoReservaf.registro}"
+                    paginator="true">
+                <p:ajax event="rowSelect" update=":pnlDetalle" process="@this"/>
+                <p:column headerText="ID">
+                    <h:outputText value="#{r.idTipoReserva}"/>
+                </p:column>
+                <p:column headerText="Nombre">
+                    <h:outputText value="#{r.nombre}"/>
+                </p:column>
+                <p:column headerText="Estado">
+                    <h:outputText value="#{r.activo?'ACTIVO':'INACTIVO'}"/>
+                </p:column>
+                <p:column headerText="Comentarios">
+                    <h:outputText value="#{r.comentarios}"/>
+                </p:column>
+            </p:dataTable>
+
+            <cc:botonesTop frm="#{frmTipoReservaf}"/>
+        </h:form>
+
+        <h:panelGroup id="pnlDetalle" styleClass="detalle" style="background-color: white;">
+            <h:form id="frmDetalle" styleClass="detalle" rendered="#{not empty frmTipoReservaf.registro}">
+                <h:panelGrid columns="2">
+                    <p:outputLabel value="ID" for="txtIdTipoReserva"/>
+                    <p:inputText id="txtIdTipoReserva"
+                                 value="#{frmTipoReservaf.registro.idTipoReserva}" readonly="true" disabled="true"/>
+
+                    <p:outputLabel value="Nombre" for="txtNombre"/>
+                    <p:inputText size="70" id="txtNombre"
+                                 value="#{frmTipoReservaf.registro.nombre}"/>
+
+                    <p:outputLabel for="chkActivo" value="Activo"/>
+                    <p:selectBooleanCheckbox id="chkActivo"
+                                             value="#{frmTipoReservaf.registro.activo}"/>
+
+                    <p:outputLabel for="txtComentarios" value="Comentarios"/>
+                    <p:inputTextarea id="txtComentarios"
+                                     value="#{frmTipoReservaf.registro.comentarios}" cols="70" rows="3"/>
+                </h:panelGrid>
+                <h:panelGrid columns="3">
+                    <p:commandButton value="Guardar" ajax="true"
+                                     process="@form"
+                                     update=":pnlDetalle :frmTable"
+                                     actionListener="#{frmTipoReservaf.btnCrearHandler}"
+                                     rendered="#{frmTipoReservaf.estado == 'CREAR'}"/>
+                    <p:commandButton value="Modificar" ajax="true"
+                                     process="@form"
+                                     update=":pnlDetalle :frmTable"
+                                     actionListener="#{frmTipoReservaf.btnModificarHandler}"
+                                     rendered="#{frmTipoReservaf.estado == 'MODIFICAR'}"/>
+                    <p:commandButton value="Eliminar" ajax="true"
+                                     process="@form"
+                                     update=":pnlDetalle :frmTable"
+                                     actionListener="#{frmTipoReservaf.btnEliminarHandler}"
+                                     rendered="#{frmTipoReservaf.estado == 'MODIFICAR'}"/>
+                </h:panelGrid>
+            </h:form>
+            <p:growl id="growl" showSummary="true" showDetail="true" life="3000" />
+        </h:panelGroup>
+    </f:define>
+</f:composition>
