@@ -35,17 +35,16 @@
 
     <!-- Default SSL configuration enables trust for default certificates from the Java runtime   postgresql-driver-->
     <ssl id="defaultSSLConfig" trustDefaultCerts="true" />
-
     <!-- Pool de conexiones -->
     <dataSource id="CineDataSource"
-                jndiName="jdbc/cine"
-                jdbcDriverRef="postgres-drivers"
+                jndiName="jdbc/pgdb"
+                jdbcDriverRef="postgresql-driver"
                 type="javax.sql.ConnectionPoolDataSource"
                 transactional="true">
         <properties serverName="localhost"
                     databaseName="cine_prn335"
                     portNumber="5432"
                     user="postgres"
-                    password="123456"/>
+                    password="abc123"/>
     </dataSource>
 </server>
