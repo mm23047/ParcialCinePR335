@@ -12,7 +12,7 @@ import java.util.List;
 
 @Named
 @ViewScoped
-public class FrmTipoSalaf extends FrmAbstractDataPersist<TipoSala> implements Serializable {
+public class FrmTipoSala extends FrmAbstractDataPersist<TipoSala> implements Serializable {
     @Inject
      TipoSalaBean dataBean;
 

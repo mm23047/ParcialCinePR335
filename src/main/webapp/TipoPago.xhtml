@@ -8,7 +8,7 @@
                template="WEB-INF/templates/principal.xhtml">
 
     <f:define name="titulo">
-        #{frmTipoPagof.tituloDePagina}
+        #{frmTipoPago.tituloDePagina}
     </f:define>
 
     <f:define name="cuerpo">
@@ -17,12 +17,12 @@
                 <h:form id="frmTable" style="background-color: white;">
                     <h:panelGrid style="background-color: white;">
                         <p:dataTable
-                                value="#{frmTipoPagof.modelo}"
+                                value="#{frmTipoPago.modelo}"
                                 var="r"
                                 rows="10"
                                 lazy="true"
                                 selectionMode="single"
-                                selection="#{frmTipoPagof.registro}"
+                                selection="#{frmTipoPago.registro}"
                                 paginator="true"
                                 style="background-color: white;">
                             <p:ajax event="rowSelect" update=":pnlDetalle" process="@this"/>
@@ -37,44 +37,44 @@
                             </p:column>
                         </p:dataTable>
 
-                        <cc:botonesTop frm="#{frmTipoPagof}"/>
+                        <cc:botonesTop frm="#{frmTipoPago}"/>
                     </h:panelGrid>
                 </h:form>
             </h:panelGroup>
         </h:panelGrid>
 
         <h:panelGroup id="pnlDetalle" styleClass="detalle" style="background-color: white;">
-            <h:form id="frmDetalle" styleClass="detalle" style="background-color: white;" rendered="#{not empty frmTipoPagof.registro}">
+            <h:form id="frmDetalle" styleClass="detalle" style="background-color: white;" rendered="#{not empty frmTipoPago.registro}">
                 <h:panelGrid columns="2" style="background-color: white;">
                     <p:outputLabel value="ID" for="txtIdTipoPago"/>
                     <p:inputText id="txtIdTipoPago"
-                                 value="#{frmTipoPagof.registro.idTipoPago}" readonly="true" disabled="true"/>
+                                 value="#{frmTipoPago.registro.idTipoPago}" readonly="true" disabled="true"/>
 
                     <p:outputLabel value="Nombre" for="txtNombre"/>
                     <p:inputText size="70" id="txtNombre"
-                                 value="#{frmTipoPagof.registro.nombre}"/>
+                                 value="#{frmTipoPago.registro.nombre}"/>
 
                     <p:outputLabel for="chkActivo" value="Activo"/>
                     <p:selectBooleanCheckbox id="chkActivo"
-                                             value="#{frmTipoPagof.registro.activo}"/>
+                                             value="#{frmTipoPago.registro.activo}"/>
                 </h:panelGrid>
 
                 <h:panelGrid columns="3" style="background-color: white;">
                     <p:commandButton value="Guardar" ajax="true"
                                      process="@form"
                                      update=":pnlDetalle :frmTable"
-                                     actionListener="#{frmTipoPagof.btnCrearHandler}"
-                                     rendered="#{frmTipoPagof.estado == 'CREAR'}"/>
+                                     actionListener="#{frmTipoPago.btnCrearHandler}"
+                                     rendered="#{frmTipoPago.estado == 'CREAR'}"/>
                     <p:commandButton value="Modificar" ajax="true"
                                      process="@form"
                                      update=":pnlDetalle :frmTable"
-                                     rendered="#{frmTipoPagof.estado == 'MODIFICAR'}"
-                                     actionListener="#{frmTipoPagof.btnModificarHandler}"/>
+                                     rendered="#{frmTipoPago.estado == 'MODIFICAR'}"
+                                     actionListener="#{frmTipoPago.btnModificarHandler}"/>
                     <p:commandButton value="Eliminar" ajax="true"
                                      process="@form"
                                      update=":pnlDetalle :frmTable"
-                                     rendered="#{frmTipoPagof.estado == 'MODIFICAR'}"
-                                     actionListener="#{frmTipoPagof.btnEliminarHandler}"/>
+                                     rendered="#{frmTipoPago.estado == 'MODIFICAR'}"
+                                     actionListener="#{frmTipoPago.btnEliminarHandler}"/>
                 </h:panelGrid>
             </h:form>
             <p:growl id="growl" showSummary="true" showDetail="true" life="3000" />

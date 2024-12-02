@@ -10,7 +10,7 @@ import java.io.Serializable;
 import java.util.List;
 @Named
 @ViewScoped
-public class FrmTipoAsientof extends FrmAbstractDataPersist<TipoAsiento> implements Serializable {
+public class FrmTipoAsiento extends FrmAbstractDataPersist<TipoAsiento> implements Serializable {
      @Inject
      TipoAsientoBean dataBean;
 

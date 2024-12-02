@@ -14,7 +14,7 @@ import java.util.List;
 
 @Named
 @ViewScoped
-public class FrmPeliculaf extends FrmAbstractDataPersist<Pelicula> implements Serializable {
+public class FrmPelicula extends FrmAbstractDataPersist<Pelicula> implements Serializable {
     @Inject
     PeliculaBean pBean;
 
@@ -22,12 +22,12 @@ public class FrmPeliculaf extends FrmAbstractDataPersist<Pelicula> implements Se
     FacesContext facesContext;
 
     @Inject
-    FrmPeliculaCaracteristicaf  frmPeliculaCaracteristicaf;
+    FrmPeliculaCaracteristica frmPeliculaCaracteristica;
 
     public  void cambiarTab(TabChangeEvent tce){
         if(tce.getTab().getTitle().equals("Tipos")){
-            if(this.registro!=null && this.frmPeliculaCaracteristicaf!=null){
-                this.frmPeliculaCaracteristicaf.setIdPelicula(this.registro.getIdPelicula());
+            if(this.registro!=null && this.frmPeliculaCaracteristica !=null){
+                this.frmPeliculaCaracteristica.setIdPelicula(this.registro.getIdPelicula());
             }
         }
 
@@ -118,8 +118,8 @@ public class FrmPeliculaf extends FrmAbstractDataPersist<Pelicula> implements Se
     }
 
 
-public FrmPeliculaCaracteristicaf getFrmPeliculaCaracteristicaf(){
-        return frmPeliculaCaracteristicaf;
+public FrmPeliculaCaracteristica getFrmPeliculaCaracteristicaf(){
+        return frmPeliculaCaracteristica;
     }
 
 

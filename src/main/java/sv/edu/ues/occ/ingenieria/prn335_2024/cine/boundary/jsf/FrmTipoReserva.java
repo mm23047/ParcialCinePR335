@@ -11,7 +11,7 @@ import java.util.List;
 
 @Named
 @ViewScoped
-public class FrmTipoReservaf extends FrmAbstractDataPersist<TipoReserva> implements Serializable {
+public class FrmTipoReserva extends FrmAbstractDataPersist<TipoReserva> implements Serializable {
      @Inject
       TipoReservaBean dataBean;
 

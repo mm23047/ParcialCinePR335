@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 
 @Named
 @Dependent
-public class FrmPeliculaCaracteristicaf extends FrmAbstractDataPersist<PeliculaCaracteristica> implements Serializable {
+public class FrmPeliculaCaracteristica extends FrmAbstractDataPersist<PeliculaCaracteristica> implements Serializable {
 Long IdPelicula;
 
     @Inject

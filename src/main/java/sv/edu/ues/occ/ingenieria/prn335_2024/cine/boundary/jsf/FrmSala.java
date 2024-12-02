@@ -10,7 +10,7 @@ import sv.edu.ues.occ.ingenieria.prn335_2024.cine.entity.Sala;
 import java.io.Serializable;
 import java.util.List;
 
-public class FrmSalaf extends FrmAbstractDataPersist<Sala> implements Serializable {
+public class FrmSala extends FrmAbstractDataPersist<Sala> implements Serializable {
     @Inject
     SalaBean sBean;
 
@@ -18,12 +18,12 @@ public class FrmSalaf extends FrmAbstractDataPersist<Sala> implements Serializab
     FacesContext facesContext;
 
     @Inject
-    FrmSalaCaracteristicaf frmSalaCaracteristicaf;
+    FrmSalaCaracteristica frmSalaCaracteristica;
 
     public void cambiarTab(TabChangeEvent tce){
         if (tce.getTab().getTitle().equals("Tipos")){
-            if (this.registro!=null && this.frmSalaCaracteristicaf!=null){
-                this.frmSalaCaracteristicaf.setIdSala(this.registro.getIdSala());
+            if (this.registro!=null && this.frmSalaCaracteristica !=null){
+                this.frmSalaCaracteristica.setIdSala(this.registro.getIdSala());
             }
         }
 
@@ -102,8 +102,8 @@ public class FrmSalaf extends FrmAbstractDataPersist<Sala> implements Serializab
         this.modelo = modelo;
     }
 
-    public FrmSalaCaracteristicaf getFrmSalaCaracteristicaf(){
-        return frmSalaCaracteristicaf;
+    public FrmSalaCaracteristica getFrmSalaCaracteristicaf(){
+        return frmSalaCaracteristica;
     }
 
 }

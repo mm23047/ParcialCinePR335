@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 
 @Named
 @Dependent
-public class FrmSalaCaracteristicaf extends FrmAbstractDataPersist<SalaCaracteristica> implements Serializable {
+public class FrmSalaCaracteristica extends FrmAbstractDataPersist<SalaCaracteristica> implements Serializable {
     Long IdSala;
     @Inject
     FacesContext facesContext;
